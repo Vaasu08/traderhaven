@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader's Haven</title>
+    <link rel="stylesheet" href="static.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Main Chart</a></li>
+                    <li><a href="#">Back Testing</a></li>
+                    <li><a href="#">Strategies and Tutorials </a></li>
+                    <li><a href="#">About us</li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" class="theme-switch">
+                <label for="theme-switch" class="switch-label">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+        </header>
+        <main>
+            <div class="sidebar">
+                <h1>Trader's Haven</h1>
+                <div class="card current-balance">
+                    <h2>Current Balance</h2>
+                    <p class="balance">$90,000</p>
+                    <h2>Original Balance</h2>
+                    <p class="original">$100,000</p>
+                </div>
+                <div class="card daily-spend">
+                    <h2>Profit / Loss : +$250</h2>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="card daily-revenue">
+                    <h2>Opening Price : $3.69</h2>
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-header">
+                    <div class="tabs">
+                        <button class="tab active">All</button>
+                    </div>
+                    <button class="download-btn"><i class="fas fa-download"></i></button>
+                </div>
+                <div class="sentiment-indicators">
+                    <div class="sentiment-circle bullish"></div>
+                    <div class="sentiment-circle neutral"></div>
+                    <div class="sentiment-circle bearish"></div>
+                </div>
+                <div class="stock-selector">
+                    <select id="stock-dropdown" class="gradient-select">
+                        <option value="AAPL">Apple (AAPL)</option>
+                        <option value="GOOGL">Alphabet (GOOGL)</option>
+                        <option value="MSFT">Microsoft (MSFT)</option>
+                        <option value="AMZN">Amazon (AMZN)</option>
+                        <option value="FB">Facebook (FB)</option>
+                    </select>
+                    <button id="select-stock" class="gradient-button">Select</button>
+                </div>
+                <div id="tradingview-widget"></div>
+            </div>
+        </main>
+    </div>
+    <script src="https://s3.tradingview.com/tv.js"></script>
+    <script src="static.js"></script>
+</body>
+</html>
